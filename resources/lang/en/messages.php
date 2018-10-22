@@ -19,5 +19,8 @@ return [
     'not_receive_email' => 'If you did not receive the email',
     'request_another' => 'click here to request another',
     'send_password_reset' => 'Send Password Reset Link',
+    'task' => 'Task',
+    'add_task' => 'Add Task',
+    'whoop' => 'Whoops! Something went wrong!',
 
 ];
