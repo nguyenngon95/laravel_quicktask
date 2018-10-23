@@ -24,5 +24,6 @@ return [
     'whoop' => 'Whoops! Something went wrong!',
     'success' => 'Success',
     'fail' => 'Fail',
+    'current_task' => 'Current Tasks',
 
 ];
