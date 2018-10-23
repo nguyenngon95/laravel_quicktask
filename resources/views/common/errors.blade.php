@@ -10,3 +10,9 @@
         </ul>
     </div>
 @endif
+@if (Session::has('err'))
+    <p class="alert alert-danger">{{Session::get('err')}}</p>
+@endif
+@if (Session::has('suc'))
+    <p class="alert alert-success">{{Session::get('suc')}}</p>
+@endif

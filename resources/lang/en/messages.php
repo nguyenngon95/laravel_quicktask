@@ -22,5 +22,7 @@ return [
     'task' => 'Task',
     'add_task' => 'Add Task',
     'whoop' => 'Whoops! Something went wrong!',
+    'success' => 'Success',
+    'fail' => 'Fail',
 
 ];
