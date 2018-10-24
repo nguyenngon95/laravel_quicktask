@@ -21,4 +21,35 @@
             </div>
         {!! Form::close() !!}
     </div>
+
+    @if (count($tasks) > config('confignumber.zero'))
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                @lang('messages.current_task')
+            </div>
+
+            <div class="panel-body">
+                <table class="table table-striped task-table">
+
+                    <thead>
+                        <th>@lang('messages.task')</th>
+                        <th>&nbsp;</th>
+                    </thead>
+
+                    <tbody>
+                        @foreach ($tasks as $task)
+                            <tr>
+                                <td class="table-text">
+                                    <div>{{ $task->name }}</div>
+                                </td>
+
+                                <td>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    @endif
 @endsection
