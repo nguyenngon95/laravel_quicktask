@@ -25,11 +25,5 @@ return [
     'success' => 'Success',
     'fail' => 'Fail',
     'current_task' => 'Current Tasks',
-    'delete' => 'Delete',
-    'edit' => 'Edit',
-    'delete_suc' => 'Delete Success',
-    'delete_fail' => 'Delete Fail',
-    'edit_suc' => 'Edit Sucess',
-    'edit_fail' => 'Edit Fail',
 
 ];

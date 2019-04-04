@@ -34,7 +34,6 @@
                     <thead>
                         <th>@lang('messages.task')</th>
                         <th>&nbsp;</th>
-                        <th>&nbsp;</th>
                     </thead>
 
                     <tbody>
@@ -45,17 +44,6 @@
                                 </td>
 
                                 <td>
-                                    {!! Form::open(['route' => ['tasks.edit', $task->id], 'method' => 'get']) !!}
-
-                                        {{ Form::submit(trans('messages.edit'), ['class' => 'btn btn-warning', 'id' => 'edit-task-'.$task->id]) }}
-                                    {!! Form::close() !!}
-                                </td>
-
-                                <td>
-                                    {!! Form::open(['url' => 'tasks/'.$task->id, 'method' => 'delete']) !!}
-
-                                        {{ Form::submit(trans('messages.delete'), ['class' => 'btn btn-danger', 'id' => 'delete-task-'.$task->id]) }}
-                                    {!! Form::close() !!}
                                 </td>
                             </tr>
                         @endforeach

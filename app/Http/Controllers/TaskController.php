@@ -39,43 +39,4 @@ class TaskController extends Controller
 
         return redirect('/tasks');
     }
-
-    public function edit(Request $request, Task $task)
-    {
-        $this->authorize('destroy', $task);
-
-        return view('tasks.edit', [
-            'task' => $task,
-        ]);
-    }
-
-    public function update(TaskRequest $request, Task $task)
-    {
-        $this->authorize('destroy', $task);
-
-        try {
-            $task->name = $request->name;
-            $task->save();
-            $request->session()->flash('suc', trans('messages.edit_suc'));
-        } catch (Exception $e) {
-            $request->session()->flash('err', $e->getMessage());
-        }
-
-        return redirect('/tasks');
-    }
-
-    public function destroy(Request $request, Task $task)
-    {
-        $this->authorize('destroy', $task);
-
-        $result = $task->delete();
-
-        if ($result) {
-            $request->session()->flash('suc', trans('messages.delete_suc'));
-        } else {
-            $request->session()->flash('err', trans('messages.delete_fail'));
-        }
-
-        return redirect('/tasks');
-    }
 }
